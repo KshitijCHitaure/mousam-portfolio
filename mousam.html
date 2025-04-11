@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kshitij Chitaure - Profile</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0b0c1a;
+      color: #fff;
+    }
+    header {
+      background: linear-gradient(90deg, #0e2f44, #a60f1c);
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    nav {
+      background-color: #06182c;
+      padding: 0.5rem;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 2rem;
+    }
+    .skills-bar {
+      margin: 1rem 0;
+    }
+    .bar {
+      background: #222;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 20px;
+      background: linear-gradient(90deg, #0e2f44, #a60f1c);
+      width: 0;
+      transition: width 2s ease-in-out;
+    }
+    footer {
+      background-color: #06182c;
+      text-align: center;
+      padding: 1rem;
+    }
+    .socials a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <img src="/mnt/data/image.png" alt="Kshitij Chitaure Profile Photo">
+    <h1>Kshitij Chitaure (MOUSAM)</h1>
+    <p>Student | Tech Enthusiast | Anime & Football Lover</p>
+  </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi! I'm Kshitij, also known as Mousam. I'm from Nepal and currently pursuing my B.Tech/B.E in Information Science and Engineering. I'm passionate about football (Messi and Pedri are my favorites!) and an avid anime fan — Death Note and L hold a special place in my heart.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-bar">
+      <p>Python</p>
+      <div class="bar"><div class="bar-fill" style="width: 90%;"></div></div>
+    </div>
+    <div class="skills-bar">
+      <p>C</p>
+      <div class="bar"><div class="bar-fill" style="width: 75%;"></div></div>
+    </div>
+    <div class="skills-bar">
+      <p>Japanese (Intermediate)</p>
+      <div class="bar"><div class="bar-fill" style="width: 60%;"></div></div>
+    </div>
+    <div class="skills-bar">
+      <p>English (Fluent)</p>
+      <div class="bar"><div class="bar-fill" style="width: 100%;"></div></div>
+    </div>
+    <div class="skills-bar">
+      <p>Nepali (Fluent)</p>
+      <div class="bar"><div class="bar-fill" style="width: 100%;"></div></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Want to connect? Drop a message below!</p>
+    <form onsubmit="alert('Form submission feature coming soon!'); return false;">
+      <input type="text" placeholder="Your Name" required style="padding: 0.5rem; width: 100%; margin-bottom: 1rem;" />
+      <input type="email" placeholder="Your Email" required style="padding: 0.5rem; width: 100%; margin-bottom: 1rem;" />
+      <textarea placeholder="Your Message" required style="padding: 0.5rem; width: 100%; height: 100px; margin-bottom: 1rem;"></textarea>
+      <button type="submit" style="padding: 0.5rem 1rem; background: #a60f1c; color: white; border: none;">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Kshitij Chitaure (MOUSAM). All rights reserved.</p>
+    <div class="socials">
+      <a href="https://github.com/KshitijCHitaure" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.facebook.com/share/167ZR6Z4G9/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/mousam_d_shady?igsh=dm1ueG95ZzE2dHln" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com/@mousamstan1919?si=YpA5zm5EXHHj4DtX" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.bar-fill').forEach(bar => {
+        bar.style.width = bar.getAttribute('style').split('width: ')[1];
+      });
+    });
+  </script>
+</body>
+</html>
